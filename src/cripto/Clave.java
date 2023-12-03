@@ -1,10 +1,12 @@
+package cripto;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.security.GeneralSecurityException;
 
 public class Clave {
-    static SecretKey generarClave() {
+    public static SecretKey generarClave() {
         try {
             // Instanciamos un generador de claves con el algoritmo AES
             KeyGenerator generador = KeyGenerator.getInstance("AES");
@@ -18,7 +20,7 @@ public class Clave {
         }
     }
 
-    static byte[] encriptar(String frase, SecretKey clave) {
+    public static byte[] encriptar(String frase, SecretKey clave) {
         try {
             // Instanciamos un cifrador que nos permitirá encriptar a partir
             // de la clave generada
@@ -39,7 +41,7 @@ public class Clave {
         }
     }
 
-    static String desencriptar(byte[] fraseCifrada, SecretKey clave) {
+    public static String desencriptar(byte[] fraseCifrada, SecretKey clave) {
         try {
             // Instanciamos un cifrador que nos permitirá desencriptar a partir
             // de la clave generada

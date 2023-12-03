@@ -1,3 +1,5 @@
+package cripto;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
@@ -20,7 +22,7 @@ public class Hash {
         }
     }
 
-    static boolean verificarCredenciales(String nombreUsuario, String password, Usuario[] usuarios) {
+    public static boolean verificarCredenciales(String nombreUsuario, String password, Usuario[] usuarios) {
         // Buscar el usuario por el nombre de usuario ingresado
         for (Usuario usuario : usuarios) {
             if (usuario.getNombre().equals(nombreUsuario)) {
@@ -28,6 +30,6 @@ public class Hash {
                 return usuario.getPassword().equals(hashPassword(password));
             }
         }
-        return false; // Usuario no encontrado
+        return false; // cripto.Usuario no encontrado
     }
 }

@@ -1,7 +1,11 @@
+import cripto.Clave;
+import cripto.Hash;
+import cripto.Usuario;
+
 import javax.crypto.SecretKey;
 import java.util.Scanner;
 
-public class Cripto {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
