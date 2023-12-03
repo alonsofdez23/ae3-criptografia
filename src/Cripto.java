@@ -29,6 +29,8 @@ public class Cripto {
                 new Usuario("alejandro", hashPassword("passalejandro"))
         };
 
+        System.out.println("======= Login =======");
+
         // Ciclo para gestionar el inicio de sesión
         while (intentos > 0) {
             System.out.print("Introduce usuario: ");
